@@ -1,0 +1,37 @@
+div.parent {
+    position: relative;
+    margin: auto;
+    padding: auto;
+    text-align: center;
+    height: 200px;
+    width: 100%;
+    
+}
+
+div.child {
+    position: absolute;
+    margin: auto;   
+    padding: auto;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 500px;
+    height: 200px;
+    width: 200px;
+    
+}
+
+
+div.sub-child {
+    position: absolute;
+    /* left: 200px;
+    right: 200px; */
+    
+}
+
+img {
+    float: right;
+    /* transform: rotate(180deg); */
+    overflow: auto;
+    transition: width ls linear;
+}

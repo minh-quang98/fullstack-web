@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="onClick()">click</button> -->
+    <p id="text"></p>
+    <script>
+        var isShow = false
+        // function onClick() {
+        //     let p = document.getElementById("text");
+
+        //     // if (!isShow) {
+        //     //     p.innerHTML = "Hello Phượng"
+        //     // } else {
+        //     //     p.innerHTML = ""
+        //     // }
+        //     // isShow = !isShow
+
+        //     // for (let i = 0; i< 10; i++) {
+        //     //     p.append("Phượng xinh đẹp")
+        //     // }
+
+        //     let arr = [0, "hello", false]
+
+        //     arr.push(10);
+
+        //     console.log(arr)
+        // }
+
+    
+
+    function giaipt(a, b, c) {
+        const delta = b * b - 4 * a * c
+        if (delta < 0) {
+            throw new Error("khong co nghiem");
+            
+        } else if (delta == 0) {
+            const n = -b / (2 * a)
+            return n
+        } else {
+            const n1 = (-b + Math.sqrt(delta)) / (2*a)
+            const n2 = (-b - Math.sqrt(delta)) / (2*a)
+            return {
+                n1: n1,
+                n2: n2,
+            }
+        }
+    }
+
+    try {
+        const results = giaipt(1, 2, -3)
+        console.log(results)
+       
+    }
+    catch (error) {
+            console.log(error)
+        }
+    </script>
+</body>
+</html>

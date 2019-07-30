@@ -1,0 +1,28 @@
+.aqua {
+    color: aqua;
+}
+
+.center {
+    text-align: center;
+    padding-top: 15%;
+}
+
+.d-flex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;;
+    align-items: center;
+}
+
+
+div {
+    background-color: green;
+    width: 200px;
+    height: 200px;
+}
+
+div .block {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+}
