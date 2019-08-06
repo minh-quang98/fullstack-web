@@ -32,6 +32,12 @@ app.get("/students", (req,res) =>{
     })
 })
 
+app.get("/students/:id", (req,res) => {
+    res.json({
+        student: students.find(item => item.id === Number(req.param.id))
+    })
+})
+
 app.post("/students", (req,res) => {
     students.push({
         id: req.body.id,
