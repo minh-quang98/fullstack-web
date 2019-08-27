@@ -1,5 +1,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+var cors = require("cors");
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/students', {useNewUrlParser: true});
 
@@ -17,22 +18,7 @@ const Student = mongoose.model('Student', {
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-
-
-
-app.get('/class/:id', (req, res) =>{
-    res.json({
-        params: req.params
-    })
-})
-
-app.post('/class', (req, res) => {
-    console.log(req.body)
-    res.json({
-        message:"post request"
-    })
-})
-
+app.use(cors());
 
 app.get("/students", (req,res) =>{
     Student.find({}, function(err, docs) {
